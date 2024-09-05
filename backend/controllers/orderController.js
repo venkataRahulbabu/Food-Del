@@ -7,7 +7,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 // Placing user order for frontend
 const placeOrder = async (req, res) => {
-  const frontend_url = "http://localhost:5173";
+  const frontend_url = "http://localhost:5174";
   try {
     // Decode the JWT token to get the user ID
     const decodedToken = jwt.verify(req.body.userId, process.env.JWT_SECRET);
